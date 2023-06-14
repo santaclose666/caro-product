@@ -23,7 +23,7 @@ import {
 export const loginUser = async (user, dispatch, navigate) => {
   dispatch(loginStart());
   try {
-    const res = await axios.post("https://tic-tac-toe-server-9jq0.onrender.com/login", user, {
+    const res = await axios.post("https://caro-server.onrender.com/login", user, {
       withCredentials: true,
     });
     dispatch(loginSuccess((await res).data));
@@ -37,7 +37,7 @@ export const loginUser = async (user, dispatch, navigate) => {
 export const registerUser = async (user, dispatch, navigate) => {
   dispatch(registerStart());
   try {
-    await axios.post("https://tic-tac-toe-server-9jq0.onrender.com/register", user, {
+    await axios.post("https://caro-server.onrender.com/register", user, {
       withCredentials: true,
     });
 
@@ -52,7 +52,7 @@ export const registerUser = async (user, dispatch, navigate) => {
 export const logoutUser = async (dispatch, navigate) => {
   dispatch(logoutStart());
   try {
-    await axios.get("https://tic-tac-toe-server-9jq0.onrender.com/logout", {
+    await axios.get("https://caro-server.onrender.com/logout", {
       withCredentials: true,
     });
     dispatch(logoutSuccess());
@@ -66,7 +66,7 @@ export const getAllUsers = async (accessToken, dispatch, axiosJWT) => {
   dispatch(getUsersStart());
 
   try {
-    const res = await axiosJWT.get("https://tic-tac-toe-server-9jq0.onrender.com/lobby", {
+    const res = await axiosJWT.get("https://caro-server.onrender.com/lobby", {
       headers: { token: `Bearer ${accessToken}` },
       withCredentials: true,
     });
@@ -80,7 +80,7 @@ export const deleteUser = async (accessToken, dispatch, id, axiosJWT) => {
   dispatch(deleteUserStart());
 
   try {
-    const res = await axiosJWT.delete("https://tic-tac-toe-server-9jq0.onrender.com/delete/" + id, {
+    const res = await axiosJWT.delete("https://caro-server.onrender.com/delete/" + id, {
       headers: { token: `Bearer ${accessToken}` },
       withCredentials: true,
     });

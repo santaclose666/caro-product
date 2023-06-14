@@ -13,14 +13,14 @@ const History = ({ handleClose }) => {
   const user = useSelector((state) => state.auth.login?.currentUser);
 
   const userName = user.username;
-  const avatarImg = `https://tic-tac-toe-server-9jq0.onrender.com/avatars/${userName}.jpg`;
-  const defaultImg = "https://tic-tac-toe-server-9jq0.onrender.com/avatars/default.jpg";
+  const avatarImg = `https://caro-server.onrender.com/avatars/${userName}.jpg`;
+  const defaultImg = "https://caro-server.onrender.com/avatars/default.jpg";
 
   useEffect(() => {
     const getHistory = async () => {
       try {
         const res = await axios.get(
-          `https://tic-tac-toe-server-9jq0.onrender.com/history/${userName}/${currPage}`,
+          `https://caro-server.onrender.com/history/${userName}/${currPage}`,
           {
             withCredentials: true,
           }

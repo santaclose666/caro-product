@@ -21,7 +21,7 @@ const UploadImg = () => {
     formData.append("file", files);
 
     try {
-      await axios.post("https://tic-tac-toe-server-9jq0.onrender.com/upload", formData, {
+      await axios.post("https://caro-server.onrender.com/upload", formData, {
         withCredentials: true,
       });
     } catch (err) {
