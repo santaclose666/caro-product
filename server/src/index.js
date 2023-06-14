@@ -12,13 +12,13 @@ const dotenv = require("dotenv");
 const route = require("./routes/router");
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://6489551bda9bcd5cd46a4c83--startling-lily-2ee1c2.netlify.app",
   credentials: true,
   optionSuccessStatus: 200,
 };
 
 dotenv.config();
-app.use(express.static('public'));
+app.use(express.static("public"));
 app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
