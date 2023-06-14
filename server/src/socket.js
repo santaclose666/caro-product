@@ -379,15 +379,7 @@ const io = (server) => {
     });
 
     socket.on("requestPlayAgainFailed", (data) => {
-      const room = data.newRoom;
-      let anotherPlayer;
-      let client = rooms.get(room);
-      data.playerRequest === client[2]
-        ? (anotherPlayer = client[4])
-        : (anotherPlayer = client[2]);
-      socket
-        .to(data.newRoom)
-        .emit("responsePlayAgainFailed", { anotherPlayer });
+      socket.to(data.newRoom).emit("responsePlayAgainFailed");
     });
 
     socket.on("sendMessage", (data) => {
