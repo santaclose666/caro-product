@@ -13,10 +13,10 @@ const ChatBox = ({ newRoom }) => {
   const [messages, setMessages] = useState([]);
   const [inputVal, setInputVal] = useState("");
   const [otherPlayer, setOtherPlayer] = useState("");
-  const avatarImg = `http://localhost:3001/avatars/${
+  const avatarImg = `https://caro-server.onrender.com/avatars/${
     otherPlayer === "" ? "default" : otherPlayer
   }.jpg`;
-  const defaultImg = "http://localhost:3001/avatars/default.jpg";
+  const defaultImg = "https://caro-server.onrender.com/avatars/default.jpg";
 
   useEffect(() => {
     socket.on("notificateJoin", (data) => {
