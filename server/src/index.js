@@ -12,7 +12,7 @@ const dotenv = require("dotenv");
 const route = require("./routes/router");
 
 const corsOptions = {
-  origin: "https://6489551bda9bcd5cd46a4c83--startling-lily-2ee1c2.netlify.app",
+  origin: "https://648958296ed59200083b1f53--startling-lily-2ee1c2.netlify.app",
   credentials: true,
   optionSuccessStatus: 200,
 };
