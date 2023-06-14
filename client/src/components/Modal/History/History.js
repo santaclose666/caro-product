@@ -39,7 +39,7 @@ const History = ({ handleClose }) => {
     };
 
     getHistory();
-  }, [currPage]);
+  }, [currPage, userName]);
 
   const handleChangePage = (page) => {
     setCurrPage(page);

@@ -112,7 +112,7 @@ const Lobby = () => {
       socket.off("matchSuccess3x3");
       socket.off("matchSuccess5x5");
     };
-  }, [socket]);
+  }, [socket, navigate, user]);
 
   return (
     <div className="wrap">

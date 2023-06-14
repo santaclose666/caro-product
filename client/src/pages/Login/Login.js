@@ -18,7 +18,7 @@ const Login = () => {
     if (checkUser) {
       navigate("/lobby");
     }
-  }, []);
+  }, [checkUser, navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

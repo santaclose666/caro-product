@@ -13,7 +13,7 @@ function Game() {
 
   useEffect(() => {
     socket.emit("joinReady", { roomname });
-  }, [socket]);
+  }, [socket, roomname]);
 
   return (
     <div>

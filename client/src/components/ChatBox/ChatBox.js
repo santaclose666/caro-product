@@ -13,7 +13,9 @@ const ChatBox = ({ newRoom }) => {
   const [messages, setMessages] = useState([]);
   const [inputVal, setInputVal] = useState("");
   const [otherPlayer, setOtherPlayer] = useState("");
-  const avatarImg = `http://localhost:3001/avatars/${otherPlayer === "" ? "default" : otherPlayer}.jpg`;
+  const avatarImg = `http://localhost:3001/avatars/${
+    otherPlayer === "" ? "default" : otherPlayer
+  }.jpg`;
   const defaultImg = "http://localhost:3001/avatars/default.jpg";
 
   useEffect(() => {
@@ -46,7 +48,7 @@ const ChatBox = ({ newRoom }) => {
         text: `${data.playerOut} just left the room!`,
         isSystem: true,
       };
-      setOtherPlayer("")
+      setOtherPlayer("");
       setMessages([...messages, newMessage]);
       scrollToBottom();
     });
@@ -61,11 +63,11 @@ const ChatBox = ({ newRoom }) => {
       scrollToBottom();
     });
 
-    return () =>{
-      socket.off("notificateJoin")
-      socket.off("receiveMessage")
-    }
-  }, [messages, socket]);
+    return () => {
+      socket.off("notificateJoin");
+      socket.off("receiveMessage");
+    };
+  }, [messages, socket, userName]);
 
   const handleEnterPress = (e) => {
     if (e.key === "Enter") {
@@ -100,6 +102,7 @@ const ChatBox = ({ newRoom }) => {
     <div className="containerChatBox">
       <div className="containerInforRival">
         <img
+          alt="avatar"
           src={avatarImg}
           onError={(e) => {
             e.target.src = defaultImg;
