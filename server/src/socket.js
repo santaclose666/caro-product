@@ -5,7 +5,7 @@ const io = (server) => {
   const socketServer = new Server(server, {
     cors: {
       origin:
-        "https://64899d8cc356c5105671443e--startling-lily-2ee1c2.netlify.app",
+        "https://6489a0fd4661030008fcf284--startling-lily-2ee1c2.netlify.app",
       methods: ["GET", "POST"],
       credentials: true,
     },
