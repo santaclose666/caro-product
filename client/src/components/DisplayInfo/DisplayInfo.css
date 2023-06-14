@@ -1,0 +1,48 @@
+.containerDisplayInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+  width: 50em;
+  margin-bottom: 1em;
+}
+
+.containerImgDisplayinfo {
+  font-size: 1.2em;
+}
+
+.containerImgDisplayinfo img {
+  width: 5em;
+  height: 5em;
+}
+
+.containerHostDisplayInfo,
+.containerGuestDisplayInfo {
+  display: flex;
+  align-items: center;
+}
+
+.hostNameDisplayInfo,
+.guestNameDisplayInfo {
+  font-size: 1.2em;
+}
+
+.containerHostDisplayInfo img,
+.containerGuestDisplayInfo img {
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: 50%;
+  margin-left: 1em;
+  margin-right: 1em;
+  object-fit: cover;
+}
+
+.containerHostDisplayInfo img:hover,
+.containerGuestDisplayInfo img:hover {
+  transition: ease-out 0.5s;
+  border: 1px solid rgb(206, 206, 206);
+  width: 4em;
+  height: 4em;
+  -webkit-transition: ease-out 0.5s;
+  cursor: pointer;
+}

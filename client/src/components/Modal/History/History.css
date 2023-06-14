@@ -1,0 +1,138 @@
+.modalContentHistory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255);
+  padding: 14px 28px;
+  width: 600px;
+  border-radius: 12px;
+  border: 1px solid;
+  box-shadow: 1px 1px 2px #000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.historyTitle {
+  color: rgb(253, 133, 133);
+}
+
+.avatar {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.8em;
+  transition: linear 0.3s;
+  border: 5px solid rgba(200, 200, 200, 0.4);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar:hover {
+  transition: ease-out 0.3s;
+  border: 5px solid rgb(206, 206, 206);
+  -webkit-transition: ease-out 0.3s;
+  cursor: pointer;
+}
+
+.containerInforHistory {
+  font-size: 1.3em;
+  display: flex;
+  justify-content: space-between;
+  width: 530px;
+  margin-bottom: 0.3em;
+}
+
+.userNameHistory {
+  color: rgb(255, 113, 113);
+}
+
+.mailHistory{
+  color: rgb(115, 115, 255);
+}
+
+.containerHistory {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  width: 600px;
+  height: 110px;
+}
+
+.containerHistory:hover {
+  background-color: rgb(216, 216, 216);
+  border-radius: 12px;
+}
+
+.itemHistory {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 90px;
+}
+
+.leftItem,
+.rightItem,
+.typeGameHistory {
+  font-size: 1.3rem;
+}
+
+.stateHistory {
+  font-size: 2rem;
+}
+
+.xHistory,
+.winnerHistory {
+  color: rgb(255, 113, 113);
+}
+
+.oHistory,
+.loserHistory {
+  color: rgb(115, 115, 255);
+}
+
+.tieHistory {
+  color: rgb(228, 213, 0);
+}
+
+.typeGameHistory {
+  color: rgb(0, 117, 117);
+}
+
+.btnHistory {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #7492ff;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: all 1s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.3em;
+  font-weight: 500;
+  font-family: "Fredoka", sans-serif;
+  box-shadow: 1px 1px 2px #000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btnHistory:hover {
+  background: #597dff;
+  color: white;
+}
+
+.btnHistory:hover .other-element {
+  pointer-events: none;
+}

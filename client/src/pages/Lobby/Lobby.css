@@ -1,0 +1,112 @@
+.welcome {
+  font-size: 2em;
+}
+
+.typeGame {
+  display: grid;
+  grid-template-columns: repeat(2, 20rem);
+  grid-column-gap: 1rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.btnTypeGame {
+  height: 20vh;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 2.5em;
+  color: wheat;
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.caro3 {
+  background-color: rgb(120, 120, 255);
+  transition: background-color 0.5s ease-in-out;
+}
+.caro3:hover {
+  background-color: #7676be;
+}
+
+.caro5 {
+  background-color: rgb(255, 119, 119);
+  transition: background-color 0.5s ease-in-out;
+}
+.caro5:hover {
+  background-color: rgb(196, 97, 97);
+}
+
+.containerWelcome {
+  font-size: 2.6em;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.username {
+  color: rgb(223, 102, 102);
+  font-weight: 600;
+}
+
+.containerTextTypeGame {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 1em;
+}
+
+.textTypeGame {
+  color: rgb(90, 90, 255);
+  font-weight: bold;
+}
+
+.type{
+  font-weight: 500;
+}
+
+.btnChangeTypeGame {
+  border: 1px solid transparent;
+  background-color: transparent;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding-top: 6px;
+}
+
+.btnLobby {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  border-radius: 20px;
+  margin-bottom: 0.4em;
+  cursor: pointer;
+  border: 1px solid;
+  padding: 5px;
+  width: 11.1em;
+  box-shadow: 1px 1px 2px #000;
+  background-color: white;
+}
+
+.blueBtn {
+  color: rgb(90, 90, 255);
+}
+
+.blueBtn:hover {
+  color: white;
+  background-color: rgb(90, 90, 255);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.redBtn {
+  color: rgb(196, 97, 97);
+}
+
+.redBtn:hover {
+  color: white;
+  background-color: rgb(196, 97, 97);
+  transition: background-color 0.5s ease-in-out;
+}

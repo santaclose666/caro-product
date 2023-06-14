@@ -1,0 +1,63 @@
+.form{
+    padding-top: 0.9em;
+}
+.labelUser, .labelEmail, .labelPwd{
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px #000;
+    padding-bottom: 0.2em;
+}
+
+.labelUser{
+    color: rgb(90, 90, 255);
+}
+
+.labelEmail{
+    color: rgb(253, 81, 81);
+}
+
+.labelPwd{
+    color: rgb(90, 90, 255);
+}
+
+.input {
+    width:36vh;
+    height: 5.5vh;
+    border: 0.1em solid black;
+    font-family: "Fredoka", sans-serif;
+    font-size: 1.1em;
+    border-radius: 9px;
+    text-indent: 1em;
+    box-shadow: 1px 1px 2px #000;
+    background-color: rgb(255, 251, 245);
+}
+
+.input:focus{
+    outline: none;
+}
+
+.notice{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(253, 81, 81);
+    padding-top: 1em;
+}
+
+.btnRegister{
+    font-family: "Fredoka", sans-serif;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 14vh;
+    height: 6vh;
+    font-size: 1.5rem;
+    background-color: rgb(253, 81, 81);
+    color:aliceblue;
+    box-shadow: 1px 1px 2px #000;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 20vh;
+    margin-top: 3vh;
+}
+
+.btnRegister:hover{
+    cursor: pointer;
+    background-color: rgb(90, 90, 255);
+}
