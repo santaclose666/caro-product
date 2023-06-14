@@ -382,6 +382,7 @@ const io = (server) => {
       const room = data.newRoom;
       let anotherPlayer;
       let client = rooms.get(room);
+      console.log(client[2]);
       data.playerRequest === client[2]
         ? (anotherPlayer = client[4])
         : (anotherPlayer = client[2]);
