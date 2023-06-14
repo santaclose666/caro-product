@@ -12,7 +12,7 @@ const CreateRoom = (props) => {
 
   const [createRoom, setCreateRoom] = useState("");
   const [toggleAlert, setToggeAlert] = useState(false);
-  const [userName, setUserName] = useState(user.username);
+  const userName = useState(user.username);
   const [msg, setMsg] = useState("");
   const typeGame = props.typeGame;
   let newRoom;

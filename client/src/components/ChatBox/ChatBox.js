@@ -65,7 +65,7 @@ const ChatBox = ({ newRoom }) => {
       socket.off("notificateJoin")
       socket.off("receiveMessage")
     }
-  }, [messages]);
+  }, [messages, socket]);
 
   const handleEnterPress = (e) => {
     if (e.key === "Enter") {

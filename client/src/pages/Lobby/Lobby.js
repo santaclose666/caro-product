@@ -31,7 +31,7 @@ const Lobby = () => {
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.auth.login?.currentUser);
-  const [userName, setUserName] = useState(user?.username);
+  const userName = useState(user?.username);
 
   const handleMatch = () => {
     if (matchRandom === "Match Random") {

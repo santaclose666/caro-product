@@ -10,7 +10,7 @@ const JoinRoom = (props) => {
   const socket = useContext(SocketContext);
 
   const [joinRoom, setJoinRoom] = useState("");
-  const [userName, setUserName] = useState(user.username);
+  const userName = useState(user.username);
   const [msg, setMsg] = useState("");
   const [toggleAlert, setToggeAlert] = useState(false);
   let newRoom;

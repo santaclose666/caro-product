@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useContext } from "react";
-import './RequestLeave.css'
+import React, { useState, useContext } from "react";
+import "./RequestLeave.css";
 import { useNavigate } from "react-router-dom";
 import { SocketContext } from "../../../SocketProvider/SocketProvider";
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 function RequestLeaveRoom(props) {
-  const [newRoom, setNewRoom] = useState(props.newRoom);
-  const [userName, setUserName] = useState(props.userName);
-  const [typeGame, setTypeGame] = useState(props.typeGame)
+  const newRoom = useState(props.newRoom);
+  const userName = useState(props.userName);
+  const typeGame = useState(props.typeGame);
   const [toggleLeave, setToggleLeave] = useState(false);
 
   const socket = useContext(SocketContext);
@@ -15,18 +15,18 @@ function RequestLeaveRoom(props) {
   const navigate = useNavigate();
 
   const handleOut = () => {
-    setToggleLeave(true)
+    setToggleLeave(true);
   };
 
   const handleYes = () => {
     socket.emit("out", { newRoom, userName, typeGame });
 
     navigate("/lobby");
-    setToggleLeave(false)
+    setToggleLeave(false);
   };
 
   const handleNo = () => {
-    setToggleLeave(false)
+    setToggleLeave(false);
   };
 
   return (
@@ -37,16 +37,24 @@ function RequestLeaveRoom(props) {
         </button>
       </div>
 
-      {toggleLeave && <div className="modal">
-        <div className="modal-content">
-          <h2 className="actionGame">Escape the room!</h2>
-          <div>
-            <div className="msgRequest">U will leave the room! Are u sure?</div>
-            <button className="btnAction" onClick={handleYes}>Yes</button>
-            <button className="btnNo" onClick={handleNo}>No</button>
+      {toggleLeave && (
+        <div className="modal">
+          <div className="modal-content">
+            <h2 className="actionGame">Escape the room!</h2>
+            <div>
+              <div className="msgRequest">
+                U will leave the room! Are u sure?
+              </div>
+              <button className="btnAction" onClick={handleYes}>
+                Yes
+              </button>
+              <button className="btnNo" onClick={handleNo}>
+                No
+              </button>
+            </div>
           </div>
         </div>
-      </div>}
+      )}
     </div>
   );
 }

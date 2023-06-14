@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import {SocketContext} from "../../../SocketProvider/SocketProvider";
 
 function RequestPlayAgain(props) {
-  const [playerRequest, setPlayerRequest] = useState(props.playerRequest);
-  const [newRoom, setNewRoom] = useState(props.newRoom);
+  const playerRequest = useState(props.playerRequest);
+  const newRoom = useState(props.newRoom);
 
   const socket = useContext(SocketContext)
 
