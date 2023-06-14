@@ -32,7 +32,6 @@ const io = (server) => {
   ];
 
   const saveHistory = async (winnerName, loserName, typeGame, winner) => {
-    console.log(winnerName, loserName);
     const newHistory = new History({
       player1: winnerName,
       player2: loserName,
@@ -68,7 +67,7 @@ const io = (server) => {
           c,
         });
 
-        return saveHistory(winnerName, loserName, typeGame, winner);
+        // return saveHistory(winnerName, loserName, typeGame, winner);
       }
     }
 
@@ -81,7 +80,7 @@ const io = (server) => {
         winner,
       });
 
-      return saveHistory(winnerName, loserName, typeGame, winner);
+      // return saveHistory(winnerName, loserName, typeGame, winner);
     }
   };
 
@@ -119,7 +118,7 @@ const io = (server) => {
           socket.emit("winner", { winner, winnerName, a, b, c, d, e });
           socket.to(room).emit("winner", { winner, winnerName, a, b, c, d, e });
 
-          return saveHistory(winnerName, loserName, typeGame, winner);
+          // return saveHistory(winnerName, loserName, typeGame, winner);
         }
 
         //check cols
@@ -140,7 +139,7 @@ const io = (server) => {
           socket.emit("winner", { winner, winnerName, a, b, c, d, e });
           socket.to(room).emit("winner", { winner, winnerName, a, b, c, d, e });
 
-          return saveHistory(winnerName, loserName, typeGame, winner);
+          // return saveHistory(winnerName, loserName, typeGame, winner);
         }
 
         //check main diagonal
@@ -161,7 +160,7 @@ const io = (server) => {
           socket.emit("winner", { winner, winnerName, a, b, c, d, e });
           socket.to(room).emit("winner", { winner, winnerName, a, b, c, d, e });
 
-          return saveHistory(winnerName, loserName, typeGame, winner);
+          // return saveHistory(winnerName, loserName, typeGame, winner);
         }
 
         //check sub diagonal
@@ -182,7 +181,7 @@ const io = (server) => {
           socket.emit("winner", { winner, winnerName, a, b, c, d, e });
           socket.to(room).emit("winner", { winner, winnerName, a, b, c, d, e });
 
-          return saveHistory(winnerName, loserName, typeGame, winner);
+          // return saveHistory(winnerName, loserName, typeGame, winner);
         }
       }
     }
