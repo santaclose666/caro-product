@@ -92,8 +92,8 @@ const Board5x5 = ({ roomname, type }) => {
       setE([]);
     });
 
-    socket.on("responsePlayAgainFailed", (data) => {
-      setMsg(`${data.anotherPlayer} did not accept your request`);
+    socket.on("responsePlayAgainFailed", () => {
+      setMsg(`competitor did not accept your request`);
       setToggeAlert(true);
     });
 

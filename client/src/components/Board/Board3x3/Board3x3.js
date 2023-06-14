@@ -83,8 +83,8 @@ const Board3x3 = ({ roomname, type }) => {
       setC("");
     });
 
-    socket.on("responsePlayAgainFailed", (data) => {
-      setMsg(`${data.anotherPlayer} did not accept your request`);
+    socket.on("responsePlayAgainFailed", () => {
+      setMsg(`competitor did not accept your request`);
       setToggeAlert(true);
     });
 
