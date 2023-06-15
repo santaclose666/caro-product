@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+    background-image: url('http://localhost:3000/caro-background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    
+  }

@@ -1,0 +1,19 @@
+.containerBoard {
+  display: grid;
+  grid-template-columns: repeat(20);
+  grid-template-rows: repeat(20);
+  justify-content: center;
+  margin-right: 5rem;
+}
+
+.containerBoardBoxChat {
+  display: flex;
+}
+
+.containerCBRR {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
+  margin-top: 20px;
+}
