@@ -23,13 +23,9 @@ import {
 export const loginUser = async (user, dispatch, navigate) => {
   dispatch(loginStart());
   try {
-    const res = await axios.post(
-      "https://caro-server.onrender.com/login",
-      user,
-      {
-        withCredentials: true,
-      }
-    );
+    const res = await axios.post("http://localhost:3001/login", user, {
+      withCredentials: true,
+    });
     dispatch(loginSuccess((await res).data));
 
     navigate("/lobby");
@@ -41,7 +37,7 @@ export const loginUser = async (user, dispatch, navigate) => {
 export const registerUser = async (user, dispatch, navigate) => {
   dispatch(registerStart());
   try {
-    await axios.post("https://caro-server.onrender.com/register", user, {
+    await axios.post("http://localhost:3001/register", user, {
       withCredentials: true,
     });
 
@@ -56,7 +52,7 @@ export const registerUser = async (user, dispatch, navigate) => {
 export const logoutUser = async (dispatch, navigate) => {
   dispatch(logoutStart());
   try {
-    await axios.get("https://caro-server.onrender.com/logout", {
+    await axios.get("http://localhost:3001/logout", {
       withCredentials: true,
     });
     dispatch(logoutSuccess());
@@ -70,7 +66,7 @@ export const getAllUsers = async (accessToken, dispatch, axiosJWT) => {
   dispatch(getUsersStart());
 
   try {
-    const res = await axiosJWT.get("https://caro-server.onrender.com/lobby", {
+    const res = await axiosJWT.get("http://localhost:3001/lobby", {
       headers: { token: `Bearer ${accessToken}` },
       withCredentials: true,
     });
@@ -84,13 +80,10 @@ export const deleteUser = async (accessToken, dispatch, id, axiosJWT) => {
   dispatch(deleteUserStart());
 
   try {
-    const res = await axiosJWT.delete(
-      "https://caro-server.onrender.com/delete/" + id,
-      {
-        headers: { token: `Bearer ${accessToken}` },
-        withCredentials: true,
-      }
-    );
+    const res = await axiosJWT.delete("http://localhost:3001/delete/" + id, {
+      headers: { token: `Bearer ${accessToken}` },
+      withCredentials: true,
+    });
     dispatch(deleteUserSuccess(res.data));
   } catch (err) {
     dispatch(deleteUserFailed(err.response.data));

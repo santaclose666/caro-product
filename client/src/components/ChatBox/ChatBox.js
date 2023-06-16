@@ -13,10 +13,10 @@ const ChatBox = ({ newRoom }) => {
   const [messages, setMessages] = useState([]);
   const [inputVal, setInputVal] = useState("");
   const [otherPlayer, setOtherPlayer] = useState("");
-  const avatarImg = `https://caro-server.onrender.com/avatars/${
+  const avatarImg = `http://localhost:3001/avatars/${
     otherPlayer === "" ? "default" : otherPlayer
   }.jpg`;
-  const defaultImg = "https://caro-server.onrender.com/avatars/default.jpg";
+  const defaultImg = "http://localhost:3001/avatars/default.jpg";
 
   useEffect(() => {
     socket.on("notificateJoin", (data) => {
@@ -49,7 +49,7 @@ const ChatBox = ({ newRoom }) => {
         isSystem: true,
       };
       setOtherPlayer("");
-      setMessages([...messages, newMessage]);
+      setMessages([newMessage]);
       scrollToBottom();
     });
 

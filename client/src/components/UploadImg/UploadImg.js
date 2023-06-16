@@ -21,7 +21,7 @@ const UploadImg = () => {
     formData.append("file", files);
 
     try {
-      await axios.post("https://caro-server.onrender.com/upload", formData, {
+      await axios.post("http://localhost:3001/upload", formData, {
         withCredentials: true,
       });
     } catch (err) {

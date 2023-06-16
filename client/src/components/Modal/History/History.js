@@ -13,14 +13,14 @@ const History = ({ handleClose }) => {
   const user = useSelector((state) => state.auth.login?.currentUser);
 
   const userName = user.username;
-  const avatarImg = `https://caro-server.onrender.com/avatars/${userName}.jpg`;
-  const defaultImg = "https://caro-server.onrender.com/avatars/default.jpg";
+  const avatarImg = `http://localhost:3001/avatars/${userName}.jpg`;
+  const defaultImg = "http://localhost:3001/avatars/default.jpg";
 
   useEffect(() => {
     const getHistory = async () => {
       try {
         const res = await axios.get(
-          `https://caro-server.onrender.com/history/${userName}/${currPage}`,
+          `http://localhost:3001/history/${userName}/${currPage}`,
           {
             withCredentials: true,
           }

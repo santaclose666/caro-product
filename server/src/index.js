@@ -12,7 +12,7 @@ const dotenv = require("dotenv");
 const route = require("./routes/router");
 
 const corsOptions = {
-  origin: "https://648ba7710a371708560bd873--dapper-scone-991057.netlify.app",
+  origin: "http://localhost:3000",
   credentials: true,
   optionSuccessStatus: 200,
 };

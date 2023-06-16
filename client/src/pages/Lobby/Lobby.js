@@ -31,7 +31,7 @@ const Lobby = () => {
   const dispatch = useDispatch();
 
   const user = useSelector((state) => state.auth.login?.currentUser);
-  const [userName, setUserName] = useState(user?.username);
+  const userName = user?.username;
 
   const handleMatch = () => {
     if (matchRandom === "Match Random") {
@@ -74,6 +74,9 @@ const Lobby = () => {
   };
 
   const handleChangeTypeGame = () => {
+    socket.emit("cancleMatching", { typeGame });
+    setMatchRandom("Match Random");
+    
     setTogglePickGame(true);
     setTogglePickRoom(false);
   };
