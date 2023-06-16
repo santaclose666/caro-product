@@ -3,9 +3,12 @@ import jwt_decode from "jwt-decode";
 
 const refreshToken = async () => {
   try {
-    const res = await axios.get("http://localhost:3001/requestRefresh", {
-      withCredentials: true,
-    });
+    const res = await axios.get(
+      "https://caro-server.onrender.com/requestRefresh",
+      {
+        withCredentials: true,
+      }
+    );
     return res.data;
   } catch (err) {
     console.log(err);

@@ -13,8 +13,10 @@ const ChatBox = ({ newRoom }) => {
   const [messages, setMessages] = useState([]);
   const [inputVal, setInputVal] = useState("");
   const [otherPlayer, setOtherPlayer] = useState("");
-  const avatarImg = `http://localhost:3001/avatars/${otherPlayer === "" ? "default" : otherPlayer}.jpg`;
-  const defaultImg = "http://localhost:3001/avatars/default.jpg";
+  const avatarImg = `https://caro-server.onrender.com/avatars/${
+    otherPlayer === "" ? "default" : otherPlayer
+  }.jpg`;
+  const defaultImg = "https://caro-server.onrender.com/avatars/default.jpg";
 
   useEffect(() => {
     socket.on("notificateJoin", (data) => {
@@ -46,7 +48,7 @@ const ChatBox = ({ newRoom }) => {
         text: `${data.playerOut} just left the room!`,
         isSystem: true,
       };
-      setOtherPlayer("")
+      setOtherPlayer("");
       setMessages([...messages, newMessage]);
       scrollToBottom();
     });
@@ -61,10 +63,10 @@ const ChatBox = ({ newRoom }) => {
       scrollToBottom();
     });
 
-    return () =>{
-      socket.off("notificateJoin")
-      socket.off("receiveMessage")
-    }
+    return () => {
+      socket.off("notificateJoin");
+      socket.off("receiveMessage");
+    };
   }, [messages]);
 
   const handleEnterPress = (e) => {
@@ -100,6 +102,7 @@ const ChatBox = ({ newRoom }) => {
     <div className="containerChatBox">
       <div className="containerInforRival">
         <img
+          alt="avatar"
           src={avatarImg}
           onError={(e) => {
             e.target.src = defaultImg;

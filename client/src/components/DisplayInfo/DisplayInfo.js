@@ -6,8 +6,8 @@ import vs from "../../Images/vs1.png";
 const DisplayInfo = ({ newRoom }) => {
   const [host, setHost] = useState("");
   const [guest, setGuest] = useState("Waiting for luv");
-  const room = newRoom
-  const defaultImg = "http://localhost:3001/avatars/default.jpg";
+  const room = newRoom;
+  const defaultImg = "https://caro-server.onrender.com/avatars/default.jpg";
 
   const socket = useContext(SocketContext);
 
@@ -33,19 +33,23 @@ const DisplayInfo = ({ newRoom }) => {
       <div className="containerDisplayInfo">
         <div className="containerHostDisplayInfo">
           <img
-            src={`http://localhost:3001/avatars/${host}.jpg`}
+            alt="avatar"
+            src={`https://caro-server.onrender.com/avatars/${host}.jpg`}
             onError={(e) => (e.target.src = defaultImg)}
           />
           <span className="hostNameDisplayInfo">{host}</span>
         </div>
         <div className="containerImgDisplayinfo">
-          <img src={vs} />
+          <img alt="icon" src={vs} />
           <div className="room">Room: {room}</div>
         </div>
         <div className="containerGuestDisplayInfo">
           <span className="guestNameDisplayInfo">{guest}</span>
           <img
-            src={`http://localhost:3001/avatars/${guest === "Waiting for luv" ? "default" : guest}.jpg`}
+            alt="avatar"
+            src={`https://caro-server.onrender.com/avatars/${
+              guest === "Waiting for luv" ? "default" : guest
+            }.jpg`}
             onError={(e) => (e.target.src = defaultImg)}
           />
         </div>
