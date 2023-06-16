@@ -4,7 +4,7 @@ const History = require("./models/history");
 const io = (server) => {
   const socketServer = new Server(server, {
     cors: {
-      origin: "http://localhost:3000",
+      origin: "https://648ba7710a371708560bd873--dapper-scone-991057.netlify.app",
       methods: ["GET", "POST"],
       credentials: true,
     },
