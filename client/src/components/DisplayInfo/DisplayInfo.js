@@ -7,7 +7,7 @@ const DisplayInfo = ({ newRoom }) => {
   const [host, setHost] = useState("");
   const [guest, setGuest] = useState("Waiting for luv");
   const room = newRoom;
-  const defaultImg = "http://localhost:3001/avatars/default.jpg";
+  const defaultImg = "https://caro-server.onrender.com/avatars/default.jpg";
 
   const socket = useContext(SocketContext);
 
@@ -34,7 +34,7 @@ const DisplayInfo = ({ newRoom }) => {
         <div className="containerHostDisplayInfo">
           <img
             alt="avatar"
-            src={`http://localhost:3001/avatars/${host}.jpg`}
+            src={`https://caro-server.onrender.com/avatars/${host}.jpg`}
             onError={(e) => (e.target.src = defaultImg)}
           />
           <span className="hostNameDisplayInfo">{host}</span>
@@ -47,7 +47,7 @@ const DisplayInfo = ({ newRoom }) => {
           <span className="guestNameDisplayInfo">{guest}</span>
           <img
             alt="avatar"
-            src={`http://localhost:3001/avatars/${
+            src={`https://caro-server.onrender.com/avatars/${
               guest === "Waiting for luv" ? "default" : guest
             }.jpg`}
             onError={(e) => (e.target.src = defaultImg)}
